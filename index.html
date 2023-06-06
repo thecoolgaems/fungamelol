@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loading Screen</title>
+<style>
+  body {
+    background-color: #000;
+    margin: 0;
+  }
+  #loader {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    border: 5px solid black;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: rotation 2s infinite linear;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+  }
+  #loadingText {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial';
+    font-size: 18px;
+    bottom: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+  }
+  #bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5
