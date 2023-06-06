@@ -36,3 +36,35 @@
     top: 0;
     left: 0;
     height: 5
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes slide {
+  from {
+    right: 100%;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
+    opacity: 1;
+  }
+}
+
+</style>
+</head>
+<body>
+  <img id="loader" src="assets/images/7x6kln_large.png">
+  <p id="loadingText">Loading...</p>
+  <div id="bar"></div>
+
+<script>
+  document.getElementById('loader').style.opacity = 1;
+  document.getElementById('bar').style.animation = 'slide 5s forwards';
+
+  var sound = new Audio('assets/audio/Chief Keef - Love Sosa.mp3');
+  sound.play();
+</script>
+</body>
+</html>
