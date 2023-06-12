@@ -52,19 +52,39 @@
   }
 }
 
+@keyframes fade {
+  from {
+    background-color: #000;
+  }
+  to {
+    background-color: #fff;
+  }
+}
+
 </style>
 </head>
 <body>
   <img id="loader" src="assets/images/7x6kln_large.png">
   <p id="loadingText">Loading...</p>
   <div id="bar"></div>
+  <audio id="myAudio" src="/assets/audio/Chief Keef - Love Sosa.mp3" autoplay>
+  </audio> 
+  <div id="buttons" style="display:none;">
+    <button id="settings" onclick="settings()">Settings</button>
+    <button id="play" onclick="play()">Play</button>
+  </div>
 
 <script>
   document.getElementById('loader').style.opacity = 1;
   document.getElementById('bar').style.animation = 'slide 5s forwards';
-
-  var sound = new Audio('assets/audio/Chief Keef - Love Sosa.mp3');
-  sound.play();
+  function change() {
+    document.getElementById('bar').style.animation = 'fade 10s forwards';
+    setTimeout(function() {
+      document.getElementById('myAudio').play();
+      document.getElementById('buttons').style.display = "inline-block";
+    }, 10000);
+  }
+  window.onload = change;
 </script>
 </body>
 </html>
